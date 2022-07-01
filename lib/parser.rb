@@ -83,6 +83,14 @@ class Parser
     IntegerNode.new consume(:integer).value.to_i
   end
 
+  def parse_string
+    consume(:quotes)
+    str = StringNode.new consume(:string).value
+    consume(:quotes)
+
+    str
+  end
+
   def parse_var_ref
     VarRefNode.new consume(:identifier).value
   end

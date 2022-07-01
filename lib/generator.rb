@@ -9,6 +9,8 @@ class Generator
       node.value
     when IntegerNode
       node.value
+    when StringNode
+      node.value
     else
       raise "Unexpected node type: #{node.class}"
     end

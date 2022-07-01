@@ -4,9 +4,11 @@ class Tokenizer
     [:end, /\bend\b/],
     [:identifier, /\b[a-zA-Z]+\b/],
     [:integer, /\b[0-9]+\b/],
+    [:string, /\b[a-zA-Z]+\b/],
     [:oparen, /\(/],
     [:cparen, /\)/],
-    [:comma, /,/]
+    [:comma, /,/],
+    [:quotes, /"/]
   ]
 
   def initialize(code)
